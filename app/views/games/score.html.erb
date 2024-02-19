@@ -1,0 +1,11 @@
+<h1>Score</h1>
+
+<% if @result == :valid_word %>
+  <p>The word is valid according to the grid and is an English word.</p>
+<% elsif @result == :invalid_word %>
+  <p>The word is valid according to the grid, but is not a valid English word.</p>
+<% else %>
+  <p>The word can’t be built out of the original grid.</p>
+<% end %>
+
+<%= link_to "Play Again!", new_path %>
